@@ -1,0 +1,76 @@
+Log file: C:\Users\Rikka\Desktop\毕业设计\源码\logs\DeepIM-GRDGAT_cora_ml_LT_seed10_20260416_133452.txt
+
+========================================================================
+Experiment Configuration
+========================================================================
+model                   : DeepIM-GRDGAT
+dataset                 : cora_ml
+diffusion_model         : LT
+seed_rate_percent       : 10
+device                  : cuda
+num_nodes               : 2810
+num_samples             : 100
+train_samples           : 84
+test_samples            : 16
+batch_size              : 16
+encoder_hidden_dim      : 1024
+latent_dim              : 512
+forward_hidden_dim      : 64
+forward_heads           : 4
+dropout                 : 0.2
+alpha                   : 0.2
+learning_rate           : 0.0001
+train_epochs            : 20
+inverse_steps           : 10
+
+========================================================================
+Stage 1: Joint Training
+========================================================================
+[Train][Epoch 1/20] total_loss=2187.2315 recon_loss=1944.3127 forward_loss=242.9188 recon_precision=0.0100 recon_recall=1.0000 time=2.6648s
+[Train][Epoch 2/20] total_loss=2172.0838 recon_loss=1929.4539 forward_loss=242.6298 recon_precision=0.0100 recon_recall=1.0000 time=1.9898s
+[Train][Epoch 3/20] total_loss=2134.2672 recon_loss=1891.9216 forward_loss=242.3455 recon_precision=0.0100 recon_recall=1.0000 time=1.9493s
+[Train][Epoch 4/20] total_loss=1977.3006 recon_loss=1735.2399 forward_loss=242.0607 recon_precision=0.0100 recon_recall=1.0000 time=1.9454s
+[Train][Epoch 5/20] total_loss=1285.6753 recon_loss=1043.8982 forward_loss=241.7772 recon_precision=0.0100 recon_recall=1.0000 time=2.1022s
+[Train][Epoch 6/20] total_loss=363.7544 recon_loss=122.2521 forward_loss=241.5023 recon_precision=0.0877 recon_recall=1.0000 time=2.0624s
+[Train][Epoch 7/20] total_loss=291.7361 recon_loss=50.5122 forward_loss=241.2239 recon_precision=0.5006 recon_recall=0.9851 time=1.9111s
+[Train][Epoch 8/20] total_loss=285.9641 recon_loss=45.0136 forward_loss=240.9505 recon_precision=0.5000 recon_recall=1.0000 time=1.9155s
+[Train][Epoch 9/20] total_loss=285.0250 recon_loss=44.3452 forward_loss=240.6798 recon_precision=0.5000 recon_recall=1.0000 time=1.9247s
+[Train][Epoch 10/20] total_loss=285.8104 recon_loss=45.3961 forward_loss=240.4143 recon_precision=0.5000 recon_recall=1.0000 time=1.9969s
+[Train][Epoch 11/20] total_loss=284.7026 recon_loss=44.5529 forward_loss=240.1497 recon_precision=0.5000 recon_recall=1.0000 time=1.9698s
+[Train][Epoch 12/20] total_loss=282.2653 recon_loss=42.3742 forward_loss=239.8912 recon_precision=0.5000 recon_recall=1.0000 time=2.0221s
+[Train][Epoch 13/20] total_loss=281.4688 recon_loss=41.8372 forward_loss=239.6317 recon_precision=0.5000 recon_recall=1.0000 time=2.0753s
+[Train][Epoch 14/20] total_loss=281.1610 recon_loss=41.7830 forward_loss=239.3780 recon_precision=0.5000 recon_recall=1.0000 time=2.1045s
+[Train][Epoch 15/20] total_loss=280.3716 recon_loss=41.2468 forward_loss=239.1249 recon_precision=0.5000 recon_recall=1.0000 time=2.1041s
+[Train][Epoch 16/20] total_loss=280.4787 recon_loss=41.6027 forward_loss=238.8761 recon_precision=0.5000 recon_recall=1.0000 time=2.0838s
+[Train][Epoch 17/20] total_loss=279.9264 recon_loss=41.2943 forward_loss=238.6321 recon_precision=0.5000 recon_recall=1.0000 time=2.0324s
+[Train][Epoch 18/20] total_loss=279.5366 recon_loss=41.1522 forward_loss=238.3844 recon_precision=0.5000 recon_recall=1.0000 time=2.0768s
+[Train][Epoch 19/20] total_loss=278.5781 recon_loss=40.4356 forward_loss=238.1425 recon_precision=0.5000 recon_recall=1.0000 time=2.0644s
+[Train][Epoch 20/20] total_loss=278.3355 recon_loss=40.4310 forward_loss=237.9045 recon_precision=0.5000 recon_recall=1.0000 time=2.0382s
+
+========================================================================
+Stage 2: Inverse Seed Optimization
+========================================================================
+C:\Users\Rikka\Desktop\毕业设计\源码\genim.py:315: UserWarning: Using a target size (torch.Size([1, 2810])) that is different to the input size (torch.Size([2810, 1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  forward_loss = F.mse_loss(y_hat, y_true)
+[Inverse][Step 1/10] total_loss=0.98676 sparsity_loss=0.00989
+[Inverse][Step 2/10] total_loss=0.98676 sparsity_loss=0.00989
+[Inverse][Step 3/10] total_loss=0.98676 sparsity_loss=0.00989
+[Inverse][Step 4/10] total_loss=0.98676 sparsity_loss=0.00989
+[Inverse][Step 5/10] total_loss=0.98676 sparsity_loss=0.00989
+[Inverse][Step 6/10] total_loss=0.98676 sparsity_loss=0.00989
+[Inverse][Step 7/10] total_loss=0.98676 sparsity_loss=0.00989
+[Inverse][Step 8/10] total_loss=0.98676 sparsity_loss=0.00989
+[Inverse][Step 9/10] total_loss=0.98676 sparsity_loss=0.00989
+[Inverse][Step 10/10] total_loss=0.98676 sparsity_loss=0.00989
+
+========================================================================
+Final Evaluation
+========================================================================
+model                   : DeepIM-GRDGAT
+dataset                 : cora_ml
+diffusion_model         : LT
+selected_seed_count     : 27
+predicted_seed_indices  : [693, 1582, 852, 1802, 2349, 1808, 264, 2100, 1450, 2481, 1787, 2704, 1159, 1254, 1456, 1902, 1195, 1695, 123, 1933, 47, 189, 82, 557, 2402, 2210, 2347]
+diffusion_count         : 180.0
+
+Experiment log saved to: C:\Users\Rikka\Desktop\毕业设计\源码\logs\DeepIM-GRDGAT_cora_ml_LT_seed10_20260416_133452.txt

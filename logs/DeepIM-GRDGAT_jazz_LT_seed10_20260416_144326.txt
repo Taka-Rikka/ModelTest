@@ -1,0 +1,83 @@
+Log file: C:\Users\Rikka\Desktop\毕业设计\源码\logs\DeepIM-GRDGAT_jazz_LT_seed10_20260416_144326.txt
+
+========================================================================
+Experiment Configuration
+========================================================================
+model                   : DeepIM-GRDGAT
+dataset                 : jazz
+diffusion_model         : LT
+seed_rate_percent       : 10
+device                  : cuda
+num_nodes               : 198
+num_samples             : 100
+train_samples           : 84
+test_samples            : 16
+batch_size              : 16
+encoder_hidden_dim      : 1024
+latent_dim              : 512
+forward_hidden_dim      : 64
+forward_heads           : 4
+dropout                 : 0.2
+alpha                   : 0.2
+target_seed_count       : 10
+learning_rate           : 0.0001
+train_epochs            : 100
+inverse_steps           : 50
+inverse_budget_weight   : 5.0
+inverse_binary_weight   : 0.1
+
+========================================================================
+Stage 1: Joint Training
+========================================================================
+[Train][Epoch 1/100] total_loss=138.1066 recon_loss=136.8333 forward_loss=1.2733 recon_precision=0.0051 recon_recall=1.0000 time=3.2497s
+[Train][Epoch 2/100] total_loss=136.7814 recon_loss=135.5095 forward_loss=1.2719 recon_precision=0.0051 recon_recall=1.0000 time=2.7480s
+[Train][Epoch 3/100] total_loss=134.1976 recon_loss=132.9269 forward_loss=1.2707 recon_precision=0.0051 recon_recall=1.0000 time=2.7333s
+[Train][Epoch 4/100] total_loss=126.2894 recon_loss=125.0198 forward_loss=1.2696 recon_precision=0.0051 recon_recall=1.0000 time=2.7475s
+[Train][Epoch 5/100] total_loss=98.0920 recon_loss=96.8234 forward_loss=1.2687 recon_precision=0.0051 recon_recall=1.0000 time=3.0160s
+[Train][Epoch 6/100] total_loss=34.2544 recon_loss=32.9865 forward_loss=1.2679 recon_precision=0.0051 recon_recall=1.0000 time=2.8353s
+[Train][Epoch 7/100] total_loss=4.9901 recon_loss=3.7228 forward_loss=1.2673 recon_precision=0.1862 recon_recall=0.8452 time=2.8428s
+[Train][Epoch 8/100] total_loss=4.3291 recon_loss=3.0623 forward_loss=1.2668 recon_precision=0.3631 recon_recall=0.7262 time=2.7676s
+[Train][Epoch 9/100] total_loss=3.4653 recon_loss=2.1989 forward_loss=1.2665 recon_precision=0.3333 recon_recall=1.0000 time=2.7432s
+[Train][Epoch 10/100] total_loss=3.4773 recon_loss=2.2111 forward_loss=1.2662 recon_precision=0.3333 recon_recall=1.0000 time=2.7669s
+[Train][Epoch 11/100] total_loss=3.4526 recon_loss=2.1866 forward_loss=1.2660 recon_precision=0.3333 recon_recall=1.0000 time=2.8586s
+[Train][Epoch 12/100] total_loss=3.2517 recon_loss=1.9858 forward_loss=1.2659 recon_precision=0.3333 recon_recall=1.0000 time=2.8820s
+[Train][Epoch 13/100] total_loss=3.2534 recon_loss=1.9877 forward_loss=1.2658 recon_precision=0.3333 recon_recall=1.0000 time=2.8469s
+[Train][Epoch 14/100] total_loss=3.2192 recon_loss=1.9535 forward_loss=1.2657 recon_precision=0.3333 recon_recall=1.0000 time=2.8252s
+[Train][Epoch 15/100] total_loss=3.1967 recon_loss=1.9311 forward_loss=1.2657 recon_precision=0.3333 recon_recall=1.0000 time=2.7752s
+[Train][Epoch 16/100] total_loss=3.2112 recon_loss=1.9456 forward_loss=1.2656 recon_precision=0.3333 recon_recall=1.0000 time=2.7212s
+[Train][Epoch 17/100] total_loss=3.1823 recon_loss=1.9167 forward_loss=1.2656 recon_precision=0.3333 recon_recall=1.0000 time=2.7920s
+[Train][Epoch 18/100] total_loss=3.1752 recon_loss=1.9096 forward_loss=1.2656 recon_precision=0.3333 recon_recall=1.0000 time=2.8699s
+[Train][Epoch 19/100] total_loss=3.1730 recon_loss=1.9073 forward_loss=1.2656 recon_precision=0.3333 recon_recall=1.0000 time=2.6110s
+[Train][Epoch 20/100] total_loss=3.2474 recon_loss=1.9818 forward_loss=1.2656 recon_precision=0.3333 recon_recall=1.0000 time=2.6629s
+[Train][Epoch 21/100] total_loss=3.2053 recon_loss=1.9397 forward_loss=1.2656 recon_precision=0.3333 recon_recall=1.0000 time=2.6821s
+[Train][Epoch 22/100] total_loss=3.1929 recon_loss=1.9273 forward_loss=1.2656 recon_precision=0.3333 recon_recall=1.0000 time=2.6832s
+[Train][Epoch 23/100] total_loss=3.2261 recon_loss=1.9605 forward_loss=1.2656 recon_precision=0.3333 recon_recall=1.0000 time=2.6253s
+[Train][Epoch 24/100] total_loss=3.2269 recon_loss=1.9613 forward_loss=1.2656 recon_precision=0.3333 recon_recall=1.0000 time=2.8826s
+[Train][Epoch 25/100] total_loss=3.2435 recon_loss=1.9778 forward_loss=1.2656 recon_precision=0.3333 recon_recall=1.0000 time=2.7806s
+[Train][Epoch 26/100] total_loss=3.2807 recon_loss=2.0151 forward_loss=1.2656 recon_precision=0.3333 recon_recall=1.0000 time=2.8384s
+[Train][Epoch 27/100] total_loss=3.1725 recon_loss=1.9068 forward_loss=1.2656 recon_precision=0.3333 recon_recall=1.0000 time=2.7787s
+[Train][Epoch 28/100] total_loss=3.2151 recon_loss=1.9495 forward_loss=1.2656 recon_precision=0.3333 recon_recall=1.0000 time=3.0164s
+[Train][Epoch 29/100] total_loss=3.1616 recon_loss=1.8960 forward_loss=1.2656 recon_precision=0.3333 recon_recall=1.0000 time=4.4899s
+[Train][Epoch 30/100] total_loss=3.2454 recon_loss=1.9798 forward_loss=1.2656 recon_precision=0.3333 recon_recall=1.0000 time=4.2713s
+Traceback (most recent call last):
+  File "C:\Users\Rikka\Desktop\毕业设计\源码\genim.py", line 277, in <module>
+    x_hat = vae_model(x_i.unsqueeze(0))
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\nn\modules\module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\nn\modules\module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Rikka\Desktop\毕业设计\源码\main\model\model.py", line 230, in forward
+    z = self.Encoder(x)
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\nn\modules\module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\nn\modules\module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Rikka\Desktop\毕业设计\源码\main\model\model.py", line 78, in forward
+    h_ = F.relu(self.FC_input2(h_))
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\nn\modules\module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\nn\modules\module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\nn\modules\linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt

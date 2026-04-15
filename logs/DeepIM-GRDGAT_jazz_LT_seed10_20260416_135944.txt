@@ -1,0 +1,76 @@
+Log file: C:\Users\Rikka\Desktop\毕业设计\源码\logs\DeepIM-GRDGAT_jazz_LT_seed10_20260416_135944.txt
+
+========================================================================
+Experiment Configuration
+========================================================================
+model                   : DeepIM-GRDGAT
+dataset                 : jazz
+diffusion_model         : LT
+seed_rate_percent       : 10
+device                  : cuda
+num_nodes               : 198
+num_samples             : 100
+train_samples           : 84
+test_samples            : 16
+batch_size              : 16
+encoder_hidden_dim      : 1024
+latent_dim              : 512
+forward_hidden_dim      : 64
+forward_heads           : 4
+dropout                 : 0.2
+alpha                   : 0.2
+learning_rate           : 0.0001
+train_epochs            : 20
+inverse_steps           : 10
+
+========================================================================
+Stage 1: Joint Training
+========================================================================
+[Train][Epoch 1/20] total_loss=138.0188 recon_loss=136.7217 forward_loss=1.2970 recon_precision=0.0051 recon_recall=1.0000 time=3.0363s
+[Train][Epoch 2/20] total_loss=136.6399 recon_loss=135.3442 forward_loss=1.2956 recon_precision=0.0051 recon_recall=1.0000 time=2.4994s
+[Train][Epoch 3/20] total_loss=134.0051 recon_loss=132.7107 forward_loss=1.2944 recon_precision=0.0051 recon_recall=1.0000 time=2.6006s
+[Train][Epoch 4/20] total_loss=125.7850 recon_loss=124.4917 forward_loss=1.2933 recon_precision=0.0051 recon_recall=1.0000 time=2.5171s
+[Train][Epoch 5/20] total_loss=96.5335 recon_loss=95.2411 forward_loss=1.2924 recon_precision=0.0051 recon_recall=1.0000 time=2.9141s
+[Train][Epoch 6/20] total_loss=32.7967 recon_loss=31.5051 forward_loss=1.2916 recon_precision=0.0051 recon_recall=1.0000 time=2.7273s
+[Train][Epoch 7/20] total_loss=5.6096 recon_loss=4.3186 forward_loss=1.2910 recon_precision=0.1771 recon_recall=0.9881 time=2.5787s
+[Train][Epoch 8/20] total_loss=4.5830 recon_loss=3.2925 forward_loss=1.2905 recon_precision=0.3373 recon_recall=0.9286 time=2.6566s
+[Train][Epoch 9/20] total_loss=3.6859 recon_loss=2.3958 forward_loss=1.2901 recon_precision=0.3333 recon_recall=1.0000 time=2.4789s
+[Train][Epoch 10/20] total_loss=3.3970 recon_loss=2.1072 forward_loss=1.2898 recon_precision=0.3333 recon_recall=1.0000 time=2.7575s
+[Train][Epoch 11/20] total_loss=3.5179 recon_loss=2.2283 forward_loss=1.2896 recon_precision=0.3333 recon_recall=1.0000 time=2.4886s
+[Train][Epoch 12/20] total_loss=3.4247 recon_loss=2.1352 forward_loss=1.2894 recon_precision=0.3333 recon_recall=1.0000 time=2.6536s
+[Train][Epoch 13/20] total_loss=3.3805 recon_loss=2.0912 forward_loss=1.2893 recon_precision=0.3333 recon_recall=1.0000 time=3.3223s
+[Train][Epoch 14/20] total_loss=3.4631 recon_loss=2.1738 forward_loss=1.2892 recon_precision=0.3333 recon_recall=1.0000 time=3.2299s
+[Train][Epoch 15/20] total_loss=3.2120 recon_loss=1.9228 forward_loss=1.2892 recon_precision=0.3333 recon_recall=1.0000 time=2.6508s
+[Train][Epoch 16/20] total_loss=3.4067 recon_loss=2.1175 forward_loss=1.2892 recon_precision=0.3333 recon_recall=1.0000 time=2.4312s
+[Train][Epoch 17/20] total_loss=3.3240 recon_loss=2.0349 forward_loss=1.2891 recon_precision=0.3333 recon_recall=1.0000 time=2.5887s
+[Train][Epoch 18/20] total_loss=3.2622 recon_loss=1.9731 forward_loss=1.2891 recon_precision=0.3333 recon_recall=1.0000 time=2.4407s
+[Train][Epoch 19/20] total_loss=3.3302 recon_loss=2.0411 forward_loss=1.2891 recon_precision=0.3333 recon_recall=1.0000 time=2.5330s
+[Train][Epoch 20/20] total_loss=3.1929 recon_loss=1.9037 forward_loss=1.2891 recon_precision=0.3333 recon_recall=1.0000 time=2.8213s
+
+========================================================================
+Stage 2: Inverse Seed Optimization
+========================================================================
+C:\Users\Rikka\Desktop\毕业设计\源码\genim.py:315: UserWarning: Using a target size (torch.Size([1, 198])) that is different to the input size (torch.Size([198, 1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  forward_loss = F.mse_loss(y_hat, y_true)
+[Inverse][Step 1/10] total_loss=0.99241 sparsity_loss=0.00516
+[Inverse][Step 2/10] total_loss=0.99241 sparsity_loss=0.00516
+[Inverse][Step 3/10] total_loss=0.99241 sparsity_loss=0.00516
+[Inverse][Step 4/10] total_loss=0.99241 sparsity_loss=0.00516
+[Inverse][Step 5/10] total_loss=0.99241 sparsity_loss=0.00516
+[Inverse][Step 6/10] total_loss=0.99241 sparsity_loss=0.00516
+[Inverse][Step 7/10] total_loss=0.99241 sparsity_loss=0.00516
+[Inverse][Step 8/10] total_loss=0.99241 sparsity_loss=0.00516
+[Inverse][Step 9/10] total_loss=0.99241 sparsity_loss=0.00516
+[Inverse][Step 10/10] total_loss=0.99241 sparsity_loss=0.00516
+
+========================================================================
+Final Evaluation
+========================================================================
+model                   : DeepIM-GRDGAT
+dataset                 : jazz
+diffusion_model         : LT
+selected_seed_count     : 0
+predicted_seed_indices  : []
+diffusion_count         : 0.0
+
+Experiment log saved to: C:\Users\Rikka\Desktop\毕业设计\源码\logs\DeepIM-GRDGAT_jazz_LT_seed10_20260416_135944.txt
