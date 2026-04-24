@@ -1,0 +1,7 @@
+Log file: C:\Users\Rikka\Desktop\毕业设计\源码\logs\DeepIM-GRDGAT-InfluenceMax_jazz_LT_seed50_20260416_214334.txt
+Traceback (most recent call last):
+  File "C:\Users\Rikka\Desktop\毕业设计\源码\genim.py", line 747, in <module>
+    main()
+  File "C:\Users\Rikka\Desktop\毕业设计\源码\genim.py", line 472, in main
+    seed_num = max(1, int(round(x_hat.sum().item())))
+UnboundLocalError: local variable 'x_hat' referenced before assignment

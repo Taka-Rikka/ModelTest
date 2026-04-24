@@ -1,0 +1,74 @@
+Log file: C:\Users\Rikka\Desktop\毕业设计\源码\logs\DeepIM-GRDGAT_jazz_IC_seed50_20260416_151037.txt
+
+========================================================================
+Experiment Configuration
+========================================================================
+model                   : DeepIM-GRDGAT
+dataset                 : jazz
+diffusion_model         : IC
+seed_rate_percent       : 50
+device                  : cuda
+num_nodes               : 198
+num_samples             : 100
+train_samples           : 84
+test_samples            : 16
+batch_size              : 16
+encoder_hidden_dim      : 1024
+latent_dim              : 512
+forward_hidden_dim      : 64
+forward_heads           : 4
+dropout                 : 0.2
+alpha                   : 0.2
+learning_rate           : 0.0001
+train_epochs            : 20
+inverse_steps           : 10
+
+========================================================================
+Stage 1: Joint Training
+========================================================================
+[Train][Epoch 1/20] total_loss=155.9452 recon_loss=136.6530 forward_loss=19.2922 recon_precision=0.0455 recon_recall=1.0000 time=3.0112s
+[Train][Epoch 2/20] total_loss=154.4703 recon_loss=135.2302 forward_loss=19.2401 recon_precision=0.0455 recon_recall=1.0000 time=2.5539s
+[Train][Epoch 3/20] total_loss=150.6799 recon_loss=131.4912 forward_loss=19.1886 recon_precision=0.0455 recon_recall=1.0000 time=2.6260s
+[Train][Epoch 4/20] total_loss=134.4102 recon_loss=115.2731 forward_loss=19.1371 recon_precision=0.0455 recon_recall=1.0000 time=2.6879s
+[Train][Epoch 5/20] total_loss=82.1256 recon_loss=63.0398 forward_loss=19.0858 recon_precision=0.0455 recon_recall=1.0000 time=2.7489s
+[Train][Epoch 6/20] total_loss=61.6553 recon_loss=42.6209 forward_loss=19.0343 recon_precision=0.0749 recon_recall=0.5489 time=2.6786s
+[Train][Epoch 7/20] total_loss=56.9660 recon_loss=37.9827 forward_loss=18.9833 recon_precision=0.1230 recon_recall=0.7394 time=2.7197s
+[Train][Epoch 8/20] total_loss=49.4891 recon_loss=30.5566 forward_loss=18.9325 recon_precision=0.0568 recon_recall=0.9974 time=2.7648s
+[Train][Epoch 9/20] total_loss=50.0609 recon_loss=31.1792 forward_loss=18.8817 recon_precision=0.0503 recon_recall=1.0000 time=2.7596s
+[Train][Epoch 10/20] total_loss=47.3248 recon_loss=28.4934 forward_loss=18.8314 recon_precision=0.1038 recon_recall=1.0000 time=2.6888s
+[Train][Epoch 11/20] total_loss=47.2466 recon_loss=28.4655 forward_loss=18.7811 recon_precision=0.1139 recon_recall=1.0000 time=3.6867s
+[Train][Epoch 12/20] total_loss=46.8160 recon_loss=28.0846 forward_loss=18.7314 recon_precision=0.1139 recon_recall=1.0000 time=2.6455s
+[Train][Epoch 13/20] total_loss=46.5766 recon_loss=27.8951 forward_loss=18.6816 recon_precision=0.1139 recon_recall=1.0000 time=2.8261s
+[Train][Epoch 14/20] total_loss=46.5121 recon_loss=27.8798 forward_loss=18.6323 recon_precision=0.1139 recon_recall=1.0000 time=2.7861s
+[Train][Epoch 15/20] total_loss=46.3637 recon_loss=27.7808 forward_loss=18.5828 recon_precision=0.1139 recon_recall=1.0000 time=2.8092s
+[Train][Epoch 16/20] total_loss=46.3099 recon_loss=27.7768 forward_loss=18.5331 recon_precision=0.1139 recon_recall=1.0000 time=2.7239s
+[Train][Epoch 17/20] total_loss=46.2599 recon_loss=27.7760 forward_loss=18.4840 recon_precision=0.1139 recon_recall=1.0000 time=2.8943s
+[Train][Epoch 18/20] total_loss=46.1752 recon_loss=27.7399 forward_loss=18.4353 recon_precision=0.1139 recon_recall=1.0000 time=2.9097s
+[Train][Epoch 19/20] total_loss=46.1160 recon_loss=27.7296 forward_loss=18.3864 recon_precision=0.1139 recon_recall=1.0000 time=2.7769s
+[Train][Epoch 20/20] total_loss=46.0556 recon_loss=27.7176 forward_loss=18.3379 recon_precision=0.1139 recon_recall=1.0000 time=2.7599s
+
+========================================================================
+Stage 2: Inverse Seed Optimization
+========================================================================
+[Inverse][Step 1/10] total_loss=1.02130 sparsity_loss=0.04492
+[Inverse][Step 2/10] total_loss=1.02129 sparsity_loss=0.04491
+[Inverse][Step 3/10] total_loss=1.02128 sparsity_loss=0.04490
+[Inverse][Step 4/10] total_loss=1.02127 sparsity_loss=0.04489
+[Inverse][Step 5/10] total_loss=1.02126 sparsity_loss=0.04488
+[Inverse][Step 6/10] total_loss=1.02125 sparsity_loss=0.04488
+[Inverse][Step 7/10] total_loss=1.02124 sparsity_loss=0.04487
+[Inverse][Step 8/10] total_loss=1.02123 sparsity_loss=0.04486
+[Inverse][Step 9/10] total_loss=1.02123 sparsity_loss=0.04485
+[Inverse][Step 10/10] total_loss=1.02122 sparsity_loss=0.04484
+
+========================================================================
+Final Evaluation
+========================================================================
+model                   : DeepIM-GRDGAT
+dataset                 : jazz
+diffusion_model         : IC
+selected_seed_count     : 9
+predicted_seed_indices  : [109, 35, 168, 140, 49, 77, 62, 164, 196]
+diffusion_count         : 37.5
+
+Experiment log saved to: C:\Users\Rikka\Desktop\毕业设计\源码\logs\DeepIM-GRDGAT_jazz_IC_seed50_20260416_151037.txt

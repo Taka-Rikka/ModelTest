@@ -1,0 +1,41 @@
+Log file: C:\Users\Rikka\Desktop\毕业设计\源码\logs\DeepIM-GRDGAT-InfluenceMax_jazz_LT_seed10_20260416_210810.txt
+Traceback (most recent call last):
+  File "C:\Users\Rikka\Desktop\毕业设计\源码\genim.py", line 747, in <module>
+    main()
+  File "C:\Users\Rikka\Desktop\毕业设计\源码\genim.py", line 507, in main
+    optimizer = Adam(
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\optim\adam.py", line 102, in __init__
+    super().__init__(params, defaults)
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\optim\optimizer.py", line 408, in __init__
+    self.add_param_group(cast(dict, param_group))
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\_compile.py", line 47, in inner
+    import torch._dynamo
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\_dynamo\__init__.py", line 13, in <module>
+    from . import (
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\_dynamo\aot_compile.py", line 14, in <module>
+    from torch._dynamo.convert_frame import GraphRuntimeEnv
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\_dynamo\convert_frame.py", line 60, in <module>
+    from torch._dynamo.symbolic_convert import TensorifyState
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\_dynamo\symbolic_convert.py", line 59, in <module>
+    from . import (
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\_dynamo\trace_rules.py", line 59, in <module>
+    from .variables import (
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\_dynamo\variables\__init__.py", line 19, in <module>
+    from .base import VariableTracker
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\_dynamo\variables\base.py", line 824, in <module>
+    from . import builder
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\_dynamo\variables\builder.py", line 100, in <module>
+    from ..side_effects import SideEffects
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\_dynamo\side_effects.py", line 34, in <module>
+    from torch._dynamo.variables.misc import AutogradFunctionContextVariable
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\_dynamo\variables\misc.py", line 71, in <module>
+    from .functions import NestedUserFunctionVariable, UserFunctionVariable
+  File "D:\AnaConda\envs\env_name_python=3.10\lib\site-packages\torch\_dynamo\variables\functions.py", line 2580, in <module>
+    from torch._higher_order_ops.triton_kernel_wrap import (
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1012, in get_code
+  File "<frozen importlib._bootstrap_external>", line 672, in _compile_bytecode
+KeyboardInterrupt

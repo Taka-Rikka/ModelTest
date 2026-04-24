@@ -1,0 +1,295 @@
+Log file: C:\Users\Rikka\Desktop\毕业设计\源码\logs\DeepIM-GRDGAT_cora_ml_SIS_seed100_20260422_165933.txt
+
+========================================================================
+Experiment Configuration
+========================================================================
+model                   : DeepIM-GRDGAT
+dataset                 : cora_ml
+diffusion_model         : SIS
+seed_rate_percent       : 100
+device                  : cuda
+num_nodes               : 2810
+num_samples             : 100
+train_samples           : 84
+test_samples            : 16
+batch_size              : 16
+encoder_hidden_dim      : 1024
+latent_dim              : 512
+forward_hidden_dim      : 64
+forward_heads           : 4
+dropout                 : 0.2
+alpha                   : 0.2
+learning_rate           : 0.0001
+train_epochs            : 100
+inverse_steps           : 100
+refine_pool_size        : 50
+refine_mc_runs          : 50
+
+========================================================================
+Stage 1: Joint Training
+========================================================================
+[Train][Epoch 1/100] total_loss=2538.8988 recon_loss=1942.9154 forward_loss=595.9834 recon_precision=0.1000 recon_recall=1.0000 time=3.4017s
+[Train][Epoch 2/100] total_loss=2513.2149 recon_loss=1917.9456 forward_loss=595.2693 recon_precision=0.1000 recon_recall=1.0000 time=2.6961s
+[Train][Epoch 3/100] total_loss=2346.2551 recon_loss=1751.6972 forward_loss=594.5580 recon_precision=0.1000 recon_recall=1.0000 time=2.5516s
+[Train][Epoch 4/100] total_loss=1499.8729 recon_loss=906.0239 forward_loss=593.8490 recon_precision=0.1004 recon_recall=1.0000 time=2.5506s
+[Train][Epoch 5/100] total_loss=942.5581 recon_loss=349.4159 forward_loss=593.1422 recon_precision=0.4889 recon_recall=1.0000 time=2.5636s
+[Train][Epoch 6/100] total_loss=925.3192 recon_loss=332.8805 forward_loss=592.4386 recon_precision=0.8180 recon_recall=1.0000 time=2.6036s
+[Train][Epoch 7/100] total_loss=779.8518 recon_loss=188.1129 forward_loss=591.7389 recon_precision=0.8098 recon_recall=1.0000 time=2.7547s
+[Train][Epoch 8/100] total_loss=770.9088 recon_loss=179.8678 forward_loss=591.0410 recon_precision=0.6801 recon_recall=1.0000 time=2.7041s
+[Train][Epoch 9/100] total_loss=763.5897 recon_loss=173.2443 forward_loss=590.3453 recon_precision=0.6845 recon_recall=1.0000 time=2.7019s
+[Train][Epoch 10/100] total_loss=747.1162 recon_loss=157.4636 forward_loss=589.6526 recon_precision=0.8224 recon_recall=1.0000 time=2.6241s
+[Train][Epoch 11/100] total_loss=744.8526 recon_loss=155.8894 forward_loss=588.9633 recon_precision=0.8338 recon_recall=1.0000 time=2.6892s
+[Train][Epoch 12/100] total_loss=743.2848 recon_loss=155.0066 forward_loss=588.2782 recon_precision=0.8338 recon_recall=1.0000 time=2.7228s
+[Train][Epoch 13/100] total_loss=739.9612 recon_loss=152.3677 forward_loss=587.5935 recon_precision=0.8338 recon_recall=1.0000 time=2.7604s
+[Train][Epoch 14/100] total_loss=739.1930 recon_loss=152.2789 forward_loss=586.9142 recon_precision=0.8338 recon_recall=1.0000 time=2.8021s
+[Train][Epoch 15/100] total_loss=737.8274 recon_loss=151.5895 forward_loss=586.2379 recon_precision=0.8338 recon_recall=1.0000 time=2.5758s
+[Train][Epoch 16/100] total_loss=736.8951 recon_loss=151.3335 forward_loss=585.5616 recon_precision=0.8338 recon_recall=1.0000 time=2.6605s
+[Train][Epoch 17/100] total_loss=736.1370 recon_loss=151.2466 forward_loss=584.8905 recon_precision=0.8338 recon_recall=1.0000 time=2.6428s
+[Train][Epoch 18/100] total_loss=735.1659 recon_loss=150.9445 forward_loss=584.2214 recon_precision=0.8338 recon_recall=1.0000 time=2.7480s
+[Train][Epoch 19/100] total_loss=734.6286 recon_loss=151.0716 forward_loss=583.5571 recon_precision=0.8338 recon_recall=1.0000 time=2.7684s
+[Train][Epoch 20/100] total_loss=733.8875 recon_loss=150.9921 forward_loss=582.8955 recon_precision=0.8338 recon_recall=1.0000 time=2.6687s
+[Train][Epoch 21/100] total_loss=733.0637 recon_loss=150.8293 forward_loss=582.2345 recon_precision=0.8338 recon_recall=1.0000 time=2.6917s
+[Train][Epoch 22/100] total_loss=732.6932 recon_loss=151.1145 forward_loss=581.5787 recon_precision=0.8338 recon_recall=1.0000 time=2.6002s
+[Train][Epoch 23/100] total_loss=732.0916 recon_loss=151.1678 forward_loss=580.9238 recon_precision=0.8338 recon_recall=1.0000 time=2.6464s
+[Train][Epoch 24/100] total_loss=731.4224 recon_loss=151.1483 forward_loss=580.2740 recon_precision=0.8338 recon_recall=1.0000 time=2.6757s
+[Train][Epoch 25/100] total_loss=730.6531 recon_loss=151.0261 forward_loss=579.6270 recon_precision=0.8338 recon_recall=1.0000 time=2.6019s
+[Train][Epoch 26/100] total_loss=729.9757 recon_loss=150.9941 forward_loss=578.9816 recon_precision=0.8338 recon_recall=1.0000 time=2.6788s
+[Train][Epoch 27/100] total_loss=729.3483 recon_loss=151.0084 forward_loss=578.3398 recon_precision=0.8338 recon_recall=1.0000 time=2.5910s
+[Train][Epoch 28/100] total_loss=728.7013 recon_loss=151.0003 forward_loss=577.7010 recon_precision=0.8338 recon_recall=1.0000 time=2.6120s
+[Train][Epoch 29/100] total_loss=727.9605 recon_loss=150.8974 forward_loss=577.0631 recon_precision=0.8338 recon_recall=1.0000 time=2.6934s
+[Train][Epoch 30/100] total_loss=727.4669 recon_loss=151.0364 forward_loss=576.4306 recon_precision=0.8338 recon_recall=1.0000 time=2.6428s
+[Train][Epoch 31/100] total_loss=726.8066 recon_loss=151.0078 forward_loss=575.7987 recon_precision=0.8338 recon_recall=1.0000 time=2.6264s
+[Train][Epoch 32/100] total_loss=726.0509 recon_loss=150.8807 forward_loss=575.1702 recon_precision=0.8338 recon_recall=1.0000 time=2.5926s
+[Train][Epoch 33/100] total_loss=725.4357 recon_loss=150.8905 forward_loss=574.5453 recon_precision=0.8338 recon_recall=1.0000 time=2.5949s
+[Train][Epoch 34/100] total_loss=724.8575 recon_loss=150.9362 forward_loss=573.9213 recon_precision=0.8338 recon_recall=1.0000 time=2.6331s
+[Train][Epoch 35/100] total_loss=724.4204 recon_loss=151.1184 forward_loss=573.3019 recon_precision=0.8338 recon_recall=1.0000 time=2.5445s
+[Train][Epoch 36/100] total_loss=723.6134 recon_loss=150.9285 forward_loss=572.6849 recon_precision=0.8338 recon_recall=1.0000 time=2.6585s
+[Train][Epoch 37/100] total_loss=723.2256 recon_loss=151.1566 forward_loss=572.0690 recon_precision=0.8338 recon_recall=1.0000 time=2.6603s
+[Train][Epoch 38/100] total_loss=722.7234 recon_loss=151.2656 forward_loss=571.4579 recon_precision=0.8338 recon_recall=1.0000 time=2.5849s
+[Train][Epoch 39/100] total_loss=721.9229 recon_loss=151.0756 forward_loss=570.8473 recon_precision=0.8338 recon_recall=1.0000 time=2.6540s
+[Train][Epoch 40/100] total_loss=721.1469 recon_loss=150.9065 forward_loss=570.2404 recon_precision=0.8338 recon_recall=1.0000 time=2.6049s
+[Train][Epoch 41/100] total_loss=720.4924 recon_loss=150.8565 forward_loss=569.6359 recon_precision=0.8338 recon_recall=1.0000 time=2.6903s
+[Train][Epoch 42/100] total_loss=720.0303 recon_loss=150.9966 forward_loss=569.0336 recon_precision=0.8338 recon_recall=1.0000 time=2.5672s
+[Train][Epoch 43/100] total_loss=719.6573 recon_loss=151.2218 forward_loss=568.4354 recon_precision=0.8338 recon_recall=1.0000 time=2.5519s
+[Train][Epoch 44/100] total_loss=718.9045 recon_loss=151.0663 forward_loss=567.8382 recon_precision=0.8338 recon_recall=1.0000 time=2.6381s
+[Train][Epoch 45/100] total_loss=718.3311 recon_loss=151.0856 forward_loss=567.2456 recon_precision=0.8338 recon_recall=1.0000 time=2.6701s
+[Train][Epoch 46/100] total_loss=718.1186 recon_loss=151.4647 forward_loss=566.6538 recon_precision=0.8338 recon_recall=1.0000 time=2.6750s
+[Train][Epoch 47/100] total_loss=717.2939 recon_loss=151.2280 forward_loss=566.0659 recon_precision=0.8338 recon_recall=1.0000 time=2.6001s
+[Train][Epoch 48/100] total_loss=716.6037 recon_loss=151.1241 forward_loss=565.4795 recon_precision=0.8338 recon_recall=1.0000 time=2.5733s
+[Train][Epoch 49/100] total_loss=715.9252 recon_loss=151.0284 forward_loss=564.8968 recon_precision=0.8338 recon_recall=1.0000 time=2.5844s
+[Train][Epoch 50/100] total_loss=715.2461 recon_loss=150.9294 forward_loss=564.3167 recon_precision=0.8338 recon_recall=1.0000 time=2.7437s
+[Train][Epoch 51/100] total_loss=714.8407 recon_loss=151.1016 forward_loss=563.7391 recon_precision=0.8338 recon_recall=1.0000 time=2.5631s
+[Train][Epoch 52/100] total_loss=714.2031 recon_loss=151.0399 forward_loss=563.1632 recon_precision=0.8338 recon_recall=1.0000 time=2.5916s
+[Train][Epoch 53/100] total_loss=713.5457 recon_loss=150.9535 forward_loss=562.5922 recon_precision=0.8338 recon_recall=1.0000 time=2.6606s
+[Train][Epoch 54/100] total_loss=713.2255 recon_loss=151.2023 forward_loss=562.0231 recon_precision=0.8338 recon_recall=1.0000 time=2.6120s
+[Train][Epoch 55/100] total_loss=712.5205 recon_loss=151.0642 forward_loss=561.4563 recon_precision=0.8338 recon_recall=1.0000 time=2.5907s
+[Train][Epoch 56/100] total_loss=712.0813 recon_loss=151.1891 forward_loss=560.8923 recon_precision=0.8338 recon_recall=1.0000 time=2.5375s
+[Train][Epoch 57/100] total_loss=711.2269 recon_loss=150.8941 forward_loss=560.3329 recon_precision=0.8338 recon_recall=1.0000 time=2.5930s
+[Train][Epoch 58/100] total_loss=710.9559 recon_loss=151.1825 forward_loss=559.7734 recon_precision=0.8338 recon_recall=1.0000 time=2.6604s
+[Train][Epoch 59/100] total_loss=710.3245 recon_loss=151.1060 forward_loss=559.2184 recon_precision=0.8338 recon_recall=1.0000 time=2.6887s
+[Train][Epoch 60/100] total_loss=709.6413 recon_loss=150.9763 forward_loss=558.6649 recon_precision=0.8338 recon_recall=1.0000 time=2.6193s
+[Train][Epoch 61/100] total_loss=709.0588 recon_loss=150.9434 forward_loss=558.1154 recon_precision=0.8338 recon_recall=1.0000 time=2.6444s
+[Train][Epoch 62/100] total_loss=708.4065 recon_loss=150.8396 forward_loss=557.5668 recon_precision=0.8338 recon_recall=1.0000 time=2.5758s
+[Train][Epoch 63/100] total_loss=708.0809 recon_loss=151.0593 forward_loss=557.0216 recon_precision=0.8338 recon_recall=1.0000 time=2.6092s
+[Train][Epoch 64/100] total_loss=707.4659 recon_loss=150.9874 forward_loss=556.4784 recon_precision=0.8338 recon_recall=1.0000 time=2.6426s
+[Train][Epoch 65/100] total_loss=706.9449 recon_loss=151.0089 forward_loss=555.9360 recon_precision=0.8338 recon_recall=1.0000 time=2.5840s
+[Train][Epoch 66/100] total_loss=706.2757 recon_loss=150.8782 forward_loss=555.3975 recon_precision=0.8338 recon_recall=1.0000 time=2.6545s
+[Train][Epoch 67/100] total_loss=705.6770 recon_loss=150.8168 forward_loss=554.8602 recon_precision=0.8338 recon_recall=1.0000 time=2.6080s
+[Train][Epoch 68/100] total_loss=705.2116 recon_loss=150.8854 forward_loss=554.3262 recon_precision=0.8338 recon_recall=1.0000 time=2.5809s
+[Train][Epoch 69/100] total_loss=704.6337 recon_loss=150.8391 forward_loss=553.7946 recon_precision=0.8338 recon_recall=1.0000 time=2.6019s
+[Train][Epoch 70/100] total_loss=704.3740 recon_loss=151.1090 forward_loss=553.2650 recon_precision=0.8338 recon_recall=1.0000 time=2.6105s
+[Train][Epoch 71/100] total_loss=703.7574 recon_loss=151.0194 forward_loss=552.7381 recon_precision=0.8338 recon_recall=1.0000 time=2.6183s
+[Train][Epoch 72/100] total_loss=702.9436 recon_loss=150.7294 forward_loss=552.2142 recon_precision=0.8338 recon_recall=1.0000 time=2.6812s
+[Train][Epoch 73/100] total_loss=702.7964 recon_loss=151.1032 forward_loss=551.6932 recon_precision=0.8338 recon_recall=1.0000 time=2.6807s
+[Train][Epoch 74/100] total_loss=702.0927 recon_loss=150.9187 forward_loss=551.1740 recon_precision=0.8338 recon_recall=1.0000 time=2.7814s
+[Train][Epoch 75/100] total_loss=701.5092 recon_loss=150.8533 forward_loss=550.6559 recon_precision=0.8338 recon_recall=1.0000 time=2.6035s
+[Train][Epoch 76/100] total_loss=701.4281 recon_loss=151.2869 forward_loss=550.1413 recon_precision=0.8338 recon_recall=1.0000 time=2.5988s
+[Train][Epoch 77/100] total_loss=700.6029 recon_loss=150.9734 forward_loss=549.6295 recon_precision=0.8338 recon_recall=1.0000 time=2.5709s
+[Train][Epoch 78/100] total_loss=699.8767 recon_loss=150.7560 forward_loss=549.1206 recon_precision=0.8338 recon_recall=1.0000 time=2.6099s
+[Train][Epoch 79/100] total_loss=699.6191 recon_loss=151.0048 forward_loss=548.6144 recon_precision=0.8338 recon_recall=1.0000 time=2.7345s
+[Train][Epoch 80/100] total_loss=699.0315 recon_loss=150.9235 forward_loss=548.1080 recon_precision=0.8338 recon_recall=1.0000 time=2.7115s
+[Train][Epoch 81/100] total_loss=698.3646 recon_loss=150.7574 forward_loss=547.6072 recon_precision=0.8338 recon_recall=1.0000 time=2.7789s
+[Train][Epoch 82/100] total_loss=698.0651 recon_loss=150.9584 forward_loss=547.1067 recon_precision=0.8338 recon_recall=1.0000 time=2.6978s
+[Train][Epoch 83/100] total_loss=697.4113 recon_loss=150.8017 forward_loss=546.6096 recon_precision=0.8338 recon_recall=1.0000 time=2.6653s
+[Train][Epoch 84/100] total_loss=696.9506 recon_loss=150.8368 forward_loss=546.1139 recon_precision=0.8338 recon_recall=1.0000 time=2.7173s
+[Train][Epoch 85/100] total_loss=696.5682 recon_loss=150.9458 forward_loss=545.6225 recon_precision=0.8338 recon_recall=1.0000 time=2.6641s
+[Train][Epoch 86/100] total_loss=696.0847 recon_loss=150.9514 forward_loss=545.1333 recon_precision=0.8338 recon_recall=1.0000 time=2.7727s
+[Train][Epoch 87/100] total_loss=695.4918 recon_loss=150.8456 forward_loss=544.6461 recon_precision=0.8338 recon_recall=1.0000 time=2.9912s
+[Train][Epoch 88/100] total_loss=695.0489 recon_loss=150.8892 forward_loss=544.1597 recon_precision=0.8338 recon_recall=1.0000 time=2.8291s
+[Train][Epoch 89/100] total_loss=694.6459 recon_loss=150.9680 forward_loss=543.6779 recon_precision=0.8338 recon_recall=1.0000 time=2.6549s
+[Train][Epoch 90/100] total_loss=694.0805 recon_loss=150.8847 forward_loss=543.1958 recon_precision=0.8338 recon_recall=1.0000 time=2.5203s
+[Train][Epoch 91/100] total_loss=693.4655 recon_loss=150.7479 forward_loss=542.7176 recon_precision=0.8338 recon_recall=1.0000 time=2.5597s
+[Train][Epoch 92/100] total_loss=693.2697 recon_loss=151.0282 forward_loss=542.2415 recon_precision=0.8338 recon_recall=1.0000 time=2.5660s
+[Train][Epoch 93/100] total_loss=692.5389 recon_loss=150.7730 forward_loss=541.7659 recon_precision=0.8338 recon_recall=1.0000 time=2.6569s
+[Train][Epoch 94/100] total_loss=691.9581 recon_loss=150.6637 forward_loss=541.2944 recon_precision=0.8338 recon_recall=1.0000 time=2.5734s
+[Train][Epoch 95/100] total_loss=691.6145 recon_loss=150.7900 forward_loss=540.8245 recon_precision=0.8338 recon_recall=1.0000 time=2.5030s
+[Train][Epoch 96/100] total_loss=691.0901 recon_loss=150.7331 forward_loss=540.3569 recon_precision=0.8338 recon_recall=1.0000 time=2.5774s
+[Train][Epoch 97/100] total_loss=690.9832 recon_loss=151.0907 forward_loss=539.8925 recon_precision=0.8338 recon_recall=1.0000 time=2.5394s
+[Train][Epoch 98/100] total_loss=690.2210 recon_loss=150.7917 forward_loss=539.4293 recon_precision=0.8338 recon_recall=1.0000 time=2.5718s
+[Train][Epoch 99/100] total_loss=689.8383 recon_loss=150.8688 forward_loss=538.9695 recon_precision=0.8338 recon_recall=1.0000 time=2.5535s
+[Train][Epoch 100/100] total_loss=689.2177 recon_loss=150.7054 forward_loss=538.5123 recon_precision=0.8338 recon_recall=1.0000 time=2.4837s
+
+========================================================================
+Stage 2: Inverse Seed Optimization
+========================================================================
+[Inverse][Step 1/100] total_loss=-0.51228 spread_loss=-0.51401 budget_loss=0.00002 binary_loss=0.01640 seed_mass=281.22
+[Inverse][Step 2/100] total_loss=-0.51229 spread_loss=-0.51401 budget_loss=0.00002 binary_loss=0.01641 seed_mass=281.22
+[Inverse][Step 3/100] total_loss=-0.51229 spread_loss=-0.51401 budget_loss=0.00002 binary_loss=0.01641 seed_mass=281.21
+[Inverse][Step 4/100] total_loss=-0.51229 spread_loss=-0.51401 budget_loss=0.00002 binary_loss=0.01641 seed_mass=281.21
+[Inverse][Step 5/100] total_loss=-0.51229 spread_loss=-0.51401 budget_loss=0.00002 binary_loss=0.01641 seed_mass=281.21
+[Inverse][Step 6/100] total_loss=-0.51230 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01641 seed_mass=281.20
+[Inverse][Step 7/100] total_loss=-0.51230 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01641 seed_mass=281.20
+[Inverse][Step 8/100] total_loss=-0.51230 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01641 seed_mass=281.20
+[Inverse][Step 9/100] total_loss=-0.51230 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01641 seed_mass=281.19
+[Inverse][Step 10/100] total_loss=-0.51231 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01641 seed_mass=281.19
+[Inverse][Step 11/100] total_loss=-0.51231 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01641 seed_mass=281.19
+[Inverse][Step 12/100] total_loss=-0.51231 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01641 seed_mass=281.18
+[Inverse][Step 13/100] total_loss=-0.51231 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01641 seed_mass=281.18
+[Inverse][Step 14/100] total_loss=-0.51231 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01641 seed_mass=281.18
+[Inverse][Step 15/100] total_loss=-0.51232 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01642 seed_mass=281.18
+[Inverse][Step 16/100] total_loss=-0.51232 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01642 seed_mass=281.17
+[Inverse][Step 17/100] total_loss=-0.51232 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01642 seed_mass=281.17
+[Inverse][Step 18/100] total_loss=-0.51232 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01642 seed_mass=281.17
+[Inverse][Step 19/100] total_loss=-0.51232 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01642 seed_mass=281.16
+[Inverse][Step 20/100] total_loss=-0.51232 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01642 seed_mass=281.16
+[Inverse][Step 21/100] total_loss=-0.51233 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01642 seed_mass=281.16
+[Inverse][Step 22/100] total_loss=-0.51233 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01642 seed_mass=281.15
+[Inverse][Step 23/100] total_loss=-0.51233 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01642 seed_mass=281.15
+[Inverse][Step 24/100] total_loss=-0.51233 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01642 seed_mass=281.15
+[Inverse][Step 25/100] total_loss=-0.51233 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01642 seed_mass=281.14
+[Inverse][Step 26/100] total_loss=-0.51233 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01642 seed_mass=281.14
+[Inverse][Step 27/100] total_loss=-0.51233 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01642 seed_mass=281.14
+[Inverse][Step 28/100] total_loss=-0.51234 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01643 seed_mass=281.14
+[Inverse][Step 29/100] total_loss=-0.51234 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01643 seed_mass=281.13
+[Inverse][Step 30/100] total_loss=-0.51234 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01643 seed_mass=281.13
+[Inverse][Step 31/100] total_loss=-0.51234 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01643 seed_mass=281.13
+[Inverse][Step 32/100] total_loss=-0.51234 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01643 seed_mass=281.12
+[Inverse][Step 33/100] total_loss=-0.51234 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01643 seed_mass=281.12
+[Inverse][Step 34/100] total_loss=-0.51234 spread_loss=-0.51401 budget_loss=0.00001 binary_loss=0.01643 seed_mass=281.12
+[Inverse][Step 35/100] total_loss=-0.51234 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01643 seed_mass=281.12
+[Inverse][Step 36/100] total_loss=-0.51235 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01643 seed_mass=281.11
+[Inverse][Step 37/100] total_loss=-0.51235 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01643 seed_mass=281.11
+[Inverse][Step 38/100] total_loss=-0.51235 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01643 seed_mass=281.11
+[Inverse][Step 39/100] total_loss=-0.51235 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01643 seed_mass=281.11
+[Inverse][Step 40/100] total_loss=-0.51235 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01643 seed_mass=281.10
+[Inverse][Step 41/100] total_loss=-0.51235 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01643 seed_mass=281.10
+[Inverse][Step 42/100] total_loss=-0.51235 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01643 seed_mass=281.10
+[Inverse][Step 43/100] total_loss=-0.51235 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.10
+[Inverse][Step 44/100] total_loss=-0.51235 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.09
+[Inverse][Step 45/100] total_loss=-0.51235 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.09
+[Inverse][Step 46/100] total_loss=-0.51235 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.09
+[Inverse][Step 47/100] total_loss=-0.51235 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.09
+[Inverse][Step 48/100] total_loss=-0.51235 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.08
+[Inverse][Step 49/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.08
+[Inverse][Step 50/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.08
+[Inverse][Step 51/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.08
+[Inverse][Step 52/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.08
+[Inverse][Step 53/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.07
+[Inverse][Step 54/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.07
+[Inverse][Step 55/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.07
+[Inverse][Step 56/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.07
+[Inverse][Step 57/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.07
+[Inverse][Step 58/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.06
+[Inverse][Step 59/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.06
+[Inverse][Step 60/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.06
+[Inverse][Step 61/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01644 seed_mass=281.06
+[Inverse][Step 62/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.06
+[Inverse][Step 63/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.05
+[Inverse][Step 64/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.05
+[Inverse][Step 65/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.05
+[Inverse][Step 66/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.05
+[Inverse][Step 67/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.05
+[Inverse][Step 68/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.05
+[Inverse][Step 69/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.05
+[Inverse][Step 70/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.04
+[Inverse][Step 71/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.04
+[Inverse][Step 72/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.04
+[Inverse][Step 73/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.04
+[Inverse][Step 74/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.04
+[Inverse][Step 75/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.04
+[Inverse][Step 76/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.04
+[Inverse][Step 77/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.03
+[Inverse][Step 78/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.03
+[Inverse][Step 79/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.03
+[Inverse][Step 80/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.03
+[Inverse][Step 81/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.03
+[Inverse][Step 82/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.03
+[Inverse][Step 83/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.03
+[Inverse][Step 84/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.03
+[Inverse][Step 85/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.03
+[Inverse][Step 86/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.03
+[Inverse][Step 87/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.02
+[Inverse][Step 88/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.02
+[Inverse][Step 89/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.02
+[Inverse][Step 90/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.02
+[Inverse][Step 91/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.02
+[Inverse][Step 92/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.02
+[Inverse][Step 93/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.02
+[Inverse][Step 94/100] total_loss=-0.51236 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.02
+[Inverse][Step 95/100] total_loss=-0.51237 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.02
+[Inverse][Step 96/100] total_loss=-0.51237 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01645 seed_mass=281.02
+[Inverse][Step 97/100] total_loss=-0.51237 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01646 seed_mass=281.02
+[Inverse][Step 98/100] total_loss=-0.51237 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01646 seed_mass=281.02
+[Inverse][Step 99/100] total_loss=-0.51237 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01646 seed_mass=281.02
+[Inverse][Step 100/100] total_loss=-0.51237 spread_loss=-0.51401 budget_loss=0.00000 binary_loss=0.01646 seed_mass=281.02
+
+========================================================================
+Stage 3: Seed Refinement
+========================================================================
+target_seed_budget      : 281
+candidate_pool_size     : 2810
+refine_mc_runs          : 50
+refine_strategy         : lazy_greedy_cached
+[Refine] building lazy-greedy queue for 2810 candidates (budget=281, mc_runs=50)
+[Refine] initialized 500/2810 singleton scores
+[Refine] initialized 1000/2810 singleton scores
+[Refine] initialized 1500/2810 singleton scores
+[Refine] initialized 2000/2810 singleton scores
+[Refine] initialized 2500/2810 singleton scores
+[Refine] initialized 2810/2810 singleton scores
+[Refine] selected 10/281 seeds, spread=230.0000, elapsed=0.09s
+[Refine] selected 20/281 seeds, spread=348.0000, elapsed=0.27s
+[Refine] selected 30/281 seeds, spread=459.0000, elapsed=0.52s
+[Refine] selected 40/281 seeds, spread=579.0000, elapsed=0.81s
+[Refine] selected 50/281 seeds, spread=658.0000, elapsed=1.21s
+[Refine] selected 60/281 seeds, spread=725.0000, elapsed=1.58s
+[Refine] selected 70/281 seeds, spread=802.0000, elapsed=2.10s
+[Refine] selected 80/281 seeds, spread=858.0000, elapsed=2.55s
+[Refine] selected 90/281 seeds, spread=931.0000, elapsed=3.22s
+[Refine] selected 100/281 seeds, spread=993.0000, elapsed=3.83s
+[Refine] selected 110/281 seeds, spread=1052.0000, elapsed=4.37s
+[Refine] selected 120/281 seeds, spread=1142.0000, elapsed=5.02s
+[Refine] selected 130/281 seeds, spread=1217.0000, elapsed=5.64s
+[Refine] selected 140/281 seeds, spread=1664.0000, elapsed=6.86s
+[Refine] selected 150/281 seeds, spread=1739.0000, elapsed=8.53s
+[Refine] selected 160/281 seeds, spread=2034.0000, elapsed=10.00s
+[Refine] selected 170/281 seeds, spread=2100.0000, elapsed=10.95s
+[Refine] selected 180/281 seeds, spread=2393.0000, elapsed=13.39s
+[Refine] selected 190/281 seeds, spread=2453.0000, elapsed=16.50s
+[Refine] selected 200/281 seeds, spread=2668.0000, elapsed=37.45s
+[Refine] selected 210/281 seeds, spread=2745.0000, elapsed=47.94s
+[Refine] selected 220/281 seeds, spread=2788.0000, elapsed=148.77s
+[Refine] selected 230/281 seeds, spread=2810.0000, elapsed=252.57s
+[Refine] selected 240/281 seeds, spread=2810.0000, elapsed=253.54s
+[Refine] selected 250/281 seeds, spread=2810.0000, elapsed=254.52s
+[Refine] selected 260/281 seeds, spread=2810.0000, elapsed=255.49s
+[Refine] selected 270/281 seeds, spread=2810.0000, elapsed=256.43s
+[Refine] selected 280/281 seeds, spread=2810.0000, elapsed=257.39s
+[Refine] selected 281/281 seeds, spread=2810.0000, elapsed=257.48s
+
+========================================================================
+Stage 4: Final Diffusion Evaluation
+========================================================================
+
+========================================================================
+Final Evaluation
+========================================================================
+model                   : DeepIM-GRDGAT
+dataset                 : cora_ml
+diffusion_model         : SIS
+selected_seed_count     : 281
+predicted_seed_indices  : [2259, 2802, 693, 2504, 1112, 1254, 1787, 1422, 1803, 2698, 1955, 2116, 2704, 2483, 851, 236, 590, 892, 1063, 1159, 1695, 1808, 1933, 2057, 189, 1526, 1699, 1736, 2742, 2769, 84, 264, 347, 580, 639, 828, 861, 867, 1146, 1306, 1582, 1702, 1795, 1914, 2216, 2250, 2263, 2481, 2753, 326, 420, 699, 852, 989, 1009, 1213, 1260, 1385, 1410, 1448, 1792, 1812, 2071, 2197, 2240, 2339, 2401, 2407, 2700, 2705, 73, 152, 222, 241, 363, 365, 413, 464, 512, 602, 627, 646, 684, 710, 741, 768, 816, 877, 929, 1060, 1073, 1103, 1109, 1231, 1270, 1479, 1500, 1522, 1549, 1637, 1669, 1724, 1775, 1801, 1802, 1841, 1888, 1946, 1989, 2019, 2036, 2111, 2140, 2255, 2390, 2393, 2402, 2460, 2470, 2511, 2568, 2631, 2677, 2685, 2794, 3, 33, 55, 82, 83, 86, 89, 102, 164, 249, 254, 255, 261, 266, 366, 509, 550, 557, 568, 696, 713, 731, 735, 744, 803, 822, 840, 875, 919, 922, 1023, 1049, 1108, 1126, 1195, 1199, 1218, 1257, 1268, 1301, 1307, 1312, 1314, 1319, 1329, 1467, 1499, 1505, 1532, 1763, 1764, 1790, 1817, 1843, 1848, 1925, 1930, 2060, 2283, 2301, 2379, 2456, 2598, 2638, 2644, 1, 45, 270, 515, 554, 644, 645, 660, 734, 1229, 1325, 1327, 1328, 1396, 1412, 1458, 1482, 1859, 1911, 1916, 1927, 1962, 2000, 2506, 2593, 511, 513, 643, 753, 1276, 1282, 1893, 1912, 0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 46, 47, 48, 49, 50, 51, 52, 53, 54, 56, 57, 58, 59, 60, 61, 62]
+fast_refine_spread      : 2810.0
+diffusion_count         : 601.8
+
+Experiment log saved to: C:\Users\Rikka\Desktop\毕业设计\源码\logs\DeepIM-GRDGAT_cora_ml_SIS_seed100_20260422_165933.txt

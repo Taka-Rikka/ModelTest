@@ -1,0 +1,110 @@
+Log file: C:\Users\Rikka\Desktop\毕业设计\源码\logs\DeepIM-GRDGAT-InfluenceMax_jazz_IC_seed10_20260416_200523.txt
+
+================================================================================
+Experiment Configuration
+================================================================================
+model                       : DeepIM-GRDGAT-InfluenceMax
+dataset                     : jazz
+diffusion_model             : IC
+seed_rate_percent           : 1
+num_nodes                   : 198
+target_seed_count           : 1
+num_samples                 : 100
+train_samples               : 84
+test_samples                : 16
+batch_size                  : 16
+encoder_hidden_dim          : 1024
+latent_dim                  : 512
+forward_hidden_dim          : 64
+forward_heads               : 4
+learning_rate               : 0.0001
+train_epochs                : 30
+inverse_steps               : 200
+seed_opt_steps              : 300
+refine_mc_runs              : 100
+refine_pool_size            : 100
+
+================================================================================
+Stage 1: Joint Training
+================================================================================
+[Train][Epoch 1/30] total_loss=274.1946 recon_loss=136.9709 forward_loss=137.2237 recon_precision=0.0049 recon_recall=0.4524 time=2.81s
+[Train][Epoch 2/30] total_loss=272.8939 recon_loss=135.7247 forward_loss=137.1692 recon_precision=0.0051 recon_recall=0.2500 time=2.36s
+[Train][Epoch 3/30] total_loss=270.6276 recon_loss=133.5128 forward_loss=137.1148 recon_precision=0.0017 recon_recall=0.0357 time=2.35s
+[Train][Epoch 4/30] total_loss=263.5761 recon_loss=126.5158 forward_loss=137.0604 recon_precision=0.0000 recon_recall=0.0000 time=2.39s
+[Train][Epoch 5/30] total_loss=236.6738 recon_loss=99.6679 forward_loss=137.0058 recon_precision=0.0000 recon_recall=0.0000 time=2.35s
+[Train][Epoch 6/30] total_loss=174.3382 recon_loss=37.3866 forward_loss=136.9516 recon_precision=0.0000 recon_recall=0.0000 time=2.43s
+[Train][Epoch 7/30] total_loss=144.9514 recon_loss=8.0540 forward_loss=136.8974 recon_precision=0.0000 recon_recall=0.0000 time=2.39s
+[Train][Epoch 8/30] total_loss=147.2464 recon_loss=10.4032 forward_loss=136.8432 recon_precision=0.0000 recon_recall=0.0000 time=2.38s
+[Train][Epoch 9/30] total_loss=145.8908 recon_loss=9.1017 forward_loss=136.7891 recon_precision=0.0000 recon_recall=0.0000 time=2.50s
+[Train][Epoch 10/30] total_loss=142.9510 recon_loss=6.2161 forward_loss=136.7349 recon_precision=0.0000 recon_recall=0.0000 time=2.43s
+[Train][Epoch 11/30] total_loss=142.0400 recon_loss=5.3591 forward_loss=136.6809 recon_precision=0.0000 recon_recall=0.0000 time=2.39s
+[Train][Epoch 12/30] total_loss=141.8903 recon_loss=5.2634 forward_loss=136.6269 recon_precision=0.0000 recon_recall=0.0000 time=2.43s
+[Train][Epoch 13/30] total_loss=141.5921 recon_loss=5.0192 forward_loss=136.5729 recon_precision=0.0000 recon_recall=0.0000 time=2.45s
+[Train][Epoch 14/30] total_loss=141.5730 recon_loss=5.0539 forward_loss=136.5190 recon_precision=0.0000 recon_recall=0.0000 time=2.43s
+[Train][Epoch 15/30] total_loss=141.4025 recon_loss=4.9374 forward_loss=136.4651 recon_precision=0.0000 recon_recall=0.0000 time=2.40s
+[Train][Epoch 16/30] total_loss=141.3435 recon_loss=4.9322 forward_loss=136.4114 recon_precision=0.0000 recon_recall=0.0000 time=2.34s
+[Train][Epoch 17/30] total_loss=141.2459 recon_loss=4.8883 forward_loss=136.3576 recon_precision=0.0000 recon_recall=0.0000 time=2.33s
+[Train][Epoch 18/30] total_loss=141.1862 recon_loss=4.8825 forward_loss=136.3038 recon_precision=0.0000 recon_recall=0.0000 time=2.53s
+[Train][Epoch 19/30] total_loss=141.1264 recon_loss=4.8762 forward_loss=136.2503 recon_precision=0.0000 recon_recall=0.0000 time=2.71s
+[Train][Epoch 20/30] total_loss=141.0715 recon_loss=4.8749 forward_loss=136.1966 recon_precision=0.0000 recon_recall=0.0000 time=2.65s
+[Train][Epoch 21/30] total_loss=141.0161 recon_loss=4.8730 forward_loss=136.1431 recon_precision=0.0000 recon_recall=0.0000 time=2.48s
+[Train][Epoch 22/30] total_loss=140.9601 recon_loss=4.8705 forward_loss=136.0896 recon_precision=0.0000 recon_recall=0.0000 time=2.60s
+[Train][Epoch 23/30] total_loss=140.9049 recon_loss=4.8688 forward_loss=136.0361 recon_precision=0.0000 recon_recall=0.0000 time=2.58s
+[Train][Epoch 24/30] total_loss=140.8471 recon_loss=4.8642 forward_loss=135.9828 recon_precision=0.0000 recon_recall=0.0000 time=2.52s
+[Train][Epoch 25/30] total_loss=140.7946 recon_loss=4.8653 forward_loss=135.9294 recon_precision=0.0000 recon_recall=0.0000 time=2.51s
+[Train][Epoch 26/30] total_loss=140.7381 recon_loss=4.8620 forward_loss=135.8761 recon_precision=0.0000 recon_recall=0.0000 time=2.63s
+[Train][Epoch 27/30] total_loss=140.6864 recon_loss=4.8636 forward_loss=135.8228 recon_precision=0.0000 recon_recall=0.0000 time=2.63s
+[Train][Epoch 28/30] total_loss=140.6288 recon_loss=4.8592 forward_loss=135.7696 recon_precision=0.0000 recon_recall=0.0000 time=2.37s
+[Train][Epoch 29/30] total_loss=140.5720 recon_loss=4.8555 forward_loss=135.7165 recon_precision=0.0000 recon_recall=0.0000 time=2.28s
+[Train][Epoch 30/30] total_loss=140.5197 recon_loss=4.8563 forward_loss=135.6634 recon_precision=0.0000 recon_recall=0.0000 time=2.36s
+
+================================================================================
+Stage 2: Latent Inversion
+================================================================================
+[Inverse][Step 1/200] total_loss=-0.49471 spread_loss=-0.49554 budget_loss=0.00001 binary_loss=0.00514 seed_mass=1.04
+[Inverse][Step 20/200] total_loss=-0.49474 spread_loss=-0.49554 budget_loss=0.00001 binary_loss=0.00509 seed_mass=1.04
+[Inverse][Step 40/200] total_loss=-0.49476 spread_loss=-0.49554 budget_loss=0.00000 binary_loss=0.00505 seed_mass=1.03
+[Inverse][Step 60/200] total_loss=-0.49478 spread_loss=-0.49554 budget_loss=0.00000 binary_loss=0.00501 seed_mass=1.02
+[Inverse][Step 80/200] total_loss=-0.49479 spread_loss=-0.49554 budget_loss=0.00000 binary_loss=0.00497 seed_mass=1.01
+[Inverse][Step 100/200] total_loss=-0.49480 spread_loss=-0.49554 budget_loss=0.00000 binary_loss=0.00495 seed_mass=1.00
+[Inverse][Step 120/200] total_loss=-0.49480 spread_loss=-0.49554 budget_loss=0.00000 binary_loss=0.00492 seed_mass=1.00
+[Inverse][Step 140/200] total_loss=-0.49480 spread_loss=-0.49554 budget_loss=0.00000 binary_loss=0.00491 seed_mass=1.00
+[Inverse][Step 160/200] total_loss=-0.49481 spread_loss=-0.49554 budget_loss=0.00000 binary_loss=0.00489 seed_mass=0.99
+[Inverse][Step 180/200] total_loss=-0.49481 spread_loss=-0.49554 budget_loss=0.00000 binary_loss=0.00488 seed_mass=0.99
+[Inverse][Step 200/200] total_loss=-0.49481 spread_loss=-0.49554 budget_loss=0.00000 binary_loss=0.00488 seed_mass=0.99
+
+================================================================================
+Stage 3: Direct Seed Optimization
+================================================================================
+[SeedOpt][Step 1/300] spread_obj=0.99997 budget_loss=0.06118 binary_loss=0.02167 seed_mass=4.48
+[SeedOpt][Step 50/300] spread_obj=0.99966 budget_loss=0.00002 binary_loss=0.00468 seed_mass=0.93
+[SeedOpt][Step 100/300] spread_obj=0.99967 budget_loss=0.00001 binary_loss=0.00483 seed_mass=0.97
+[SeedOpt][Step 150/300] spread_obj=0.99969 budget_loss=0.00000 binary_loss=0.00495 seed_mass=0.99
+[SeedOpt][Step 200/300] spread_obj=0.99969 budget_loss=0.00000 binary_loss=0.00495 seed_mass=0.99
+[SeedOpt][Step 250/300] spread_obj=0.99969 budget_loss=0.00000 binary_loss=0.00495 seed_mass=0.99
+[SeedOpt][Step 300/300] spread_obj=0.99969 budget_loss=0.00000 binary_loss=0.00495 seed_mass=0.99
+
+================================================================================
+Stage 4: Discrete Candidate Search
+================================================================================
+[Candidate] latent_topk          estimated_spread=6.6600 seeds=[23]
+[Candidate] optimized_topk       estimated_spread=20.2100 seeds=[135]
+[Candidate] hybrid_topk          estimated_spread=22.7700 seeds=[135]
+[Candidate] pagerank_topk        estimated_spread=21.4600 seeds=[135]
+[Candidate] degree_topk          estimated_spread=21.9100 seeds=[135]
+[Candidate] celf_pool            estimated_spread=20.2500 seeds=[135]
+
+================================================================================
+Final Evaluation
+================================================================================
+model                       : DeepIM-GRDGAT-InfluenceMax
+dataset                     : jazz
+diffusion_model             : IC
+budget_seed_count           : 1
+selected_seed_count         : 1
+selection_source            : hybrid_topk
+predicted_seed_indices      : [135]
+fast_refine_spread          : 21.12
+diffusion_count             : 11.9
+
+Experiment log saved to: C:\Users\Rikka\Desktop\毕业设计\源码\logs\DeepIM-GRDGAT-InfluenceMax_jazz_IC_seed10_20260416_200523.txt

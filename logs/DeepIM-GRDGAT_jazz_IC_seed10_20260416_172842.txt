@@ -1,0 +1,56 @@
+Log file: C:\Users\Rikka\Desktop\毕业设计\源码\logs\DeepIM-GRDGAT_jazz_IC_seed10_20260416_172842.txt
+
+========================================================================
+Experiment Configuration
+========================================================================
+model                   : DeepIM-GRDGAT
+dataset                 : jazz
+diffusion_model         : IC
+seed_rate_percent       : 10
+device                  : cuda
+num_nodes               : 198
+num_samples             : 100
+train_samples           : 84
+test_samples            : 16
+batch_size              : 16
+encoder_hidden_dim      : 1024
+latent_dim              : 512
+forward_hidden_dim      : 64
+forward_heads           : 4
+dropout                 : 0.2
+alpha                   : 0.2
+learning_rate           : 0.0001
+train_epochs            : 20
+inverse_steps           : 10
+
+========================================================================
+Stage 1: Joint Training
+========================================================================
+[Train][Epoch 1/20] total_loss=139.0291 recon_loss=136.8794 forward_loss=2.1497 recon_precision=0.0051 recon_recall=1.0000 time=3.5655s
+[Train][Epoch 2/20] total_loss=137.7094 recon_loss=135.5693 forward_loss=2.1401 recon_precision=0.0051 recon_recall=1.0000 time=2.8212s
+[Train][Epoch 3/20] total_loss=135.2794 recon_loss=133.1484 forward_loss=2.1310 recon_precision=0.0051 recon_recall=1.0000 time=2.9684s
+[Train][Epoch 4/20] total_loss=127.9052 recon_loss=125.7835 forward_loss=2.1217 recon_precision=0.0051 recon_recall=1.0000 time=2.7563s
+[Train][Epoch 5/20] total_loss=100.3455 recon_loss=98.2326 forward_loss=2.1129 recon_precision=0.0051 recon_recall=1.0000 time=2.8503s
+[Train][Epoch 6/20] total_loss=35.8654 recon_loss=33.7614 forward_loss=2.1040 recon_precision=0.0051 recon_recall=1.0000 time=2.8692s
+[Train][Epoch 7/20] total_loss=9.6035 recon_loss=7.5084 forward_loss=2.0951 recon_precision=0.0039 recon_recall=0.1548 time=2.7982s
+[Train][Epoch 8/20] total_loss=13.7039 recon_loss=11.6170 forward_loss=2.0869 recon_precision=0.0000 recon_recall=0.0000 time=2.9317s
+[Train][Epoch 9/20] total_loss=14.0979 recon_loss=12.0195 forward_loss=2.0784 recon_precision=0.0000 recon_recall=0.0000 time=2.6735s
+[Train][Epoch 10/20] total_loss=11.4683 recon_loss=9.3982 forward_loss=2.0701 recon_precision=0.0000 recon_recall=0.0000 time=2.7304s
+[Train][Epoch 11/20] total_loss=8.7262 recon_loss=6.6639 forward_loss=2.0623 recon_precision=0.0386 recon_recall=0.1190 time=2.6389s
+[Train][Epoch 12/20] total_loss=7.3873 recon_loss=5.3328 forward_loss=2.0544 recon_precision=0.0268 recon_recall=0.6071 time=2.7671s
+[Train][Epoch 13/20] total_loss=7.4199 recon_loss=5.3731 forward_loss=2.0468 recon_precision=0.0213 recon_recall=0.8095 time=2.6785s
+[Train][Epoch 14/20] total_loss=7.3541 recon_loss=5.3143 forward_loss=2.0397 recon_precision=0.0207 recon_recall=0.8810 time=2.8584s
+[Train][Epoch 15/20] total_loss=7.0903 recon_loss=5.0581 forward_loss=2.0322 recon_precision=0.0209 recon_recall=0.8452 time=2.7019s
+[Train][Epoch 16/20] total_loss=7.0217 recon_loss=4.9964 forward_loss=2.0254 recon_precision=0.0223 recon_recall=0.7857 time=2.7183s
+[Train][Epoch 17/20] total_loss=7.0347 recon_loss=5.0163 forward_loss=2.0184 recon_precision=0.0231 recon_recall=0.7738 time=2.8667s
+[Train][Epoch 18/20] total_loss=7.0126 recon_loss=5.0011 forward_loss=2.0115 recon_precision=0.0221 recon_recall=0.7976 time=2.7436s
+[Train][Epoch 19/20] total_loss=6.9792 recon_loss=4.9741 forward_loss=2.0051 recon_precision=0.0219 recon_recall=0.9167 time=2.7371s
+[Train][Epoch 20/20] total_loss=6.9605 recon_loss=4.9616 forward_loss=1.9989 recon_precision=0.0201 recon_recall=0.9643 time=2.8611s
+
+========================================================================
+Stage 2: Inverse Seed Optimization
+========================================================================
+Traceback (most recent call last):
+  File "C:\Users\Rikka\Desktop\毕业设计\源码\genim.py", line 489, in <module>
+    log_inverse_metrics(i + 1, inverse_steps, loss.item(), L0.item())
+TypeError: log_inverse_metrics() missing 3 required positional arguments: 'budget_loss', 'binary_loss', and 'seed_mass'

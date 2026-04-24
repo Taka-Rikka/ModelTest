@@ -3,6 +3,7 @@ import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 import argparse
+import heapq
 import pickle
 import sys
 import time
@@ -224,6 +225,9 @@ def simulate_lt(seeds, neighbors, lt_thresholds):
 def estimate_spread_fast(
     seeds, diffusion_model, neighbors, degrees, lt_thresholds, mc_runs=50, base_seed=42
 ):
+    if diffusion_model == "LT":
+        return float(simulate_lt(seeds, neighbors, lt_thresholds))
+
     spreads = []
     for offset in range(mc_runs):
         rng = np.random.default_rng(base_seed + offset)
@@ -233,6 +237,28 @@ def estimate_spread_fast(
             spread = simulate_lt(seeds, neighbors, lt_thresholds)
         spreads.append(spread)
     return float(np.mean(spreads))
+
+
+def make_cached_fast_spread_estimator(
+    diffusion_model, neighbors, degrees, lt_thresholds, mc_runs=50, random_seed=42
+):
+    cache = {}
+
+    def estimate(seeds):
+        key = tuple(sorted(int(node) for node in seeds))
+        if key not in cache:
+            cache[key] = estimate_spread_fast(
+                key,
+                diffusion_model,
+                neighbors,
+                degrees,
+                lt_thresholds,
+                mc_runs=mc_runs,
+                base_seed=random_seed + len(cache) * 9973,
+            )
+        return cache[key]
+
+    return estimate
 
 
 def normalize_scores(scores):
@@ -254,6 +280,7 @@ def greedy_refine_seed_set(
     pool_size=50,
     mc_runs=50,
     random_seed=42,
+    progress_every=10,
 ):
     graph, neighbors, degrees, lt_thresholds = build_diffusion_helpers(adj_matrix)
     pagerank_scores = nx.pagerank(graph)
@@ -267,32 +294,56 @@ def greedy_refine_seed_set(
     pool_size = min(graph.number_of_nodes(), max(pool_size, budget))
     candidate_pool = np.argsort(-combined_scores)[:pool_size].tolist()
 
-    selected = []
-    current_spread = 0.0
-    for step in range(budget):
-        best_node = None
-        best_spread = -1.0
-        for node in candidate_pool:
-            if node in selected:
-                continue
-            spread = estimate_spread_fast(
-                selected + [node],
-                diffusion_model,
-                neighbors,
-                degrees,
-                lt_thresholds,
-                mc_runs=mc_runs,
-                base_seed=random_seed + step * 9973 + node,
+    estimate = make_cached_fast_spread_estimator(
+        diffusion_model,
+        neighbors,
+        degrees,
+        lt_thresholds,
+        mc_runs=mc_runs,
+        random_seed=random_seed,
+    )
+    progress_every = max(1, progress_every)
+    print(
+        "[Refine] building lazy-greedy queue for {} candidates (budget={}, mc_runs={})".format(
+            len(candidate_pool), budget, mc_runs
+        )
+    )
+
+    heap = []
+    for idx, node in enumerate(candidate_pool, start=1):
+        gain = estimate([node])
+        heapq.heappush(heap, (-gain, node, 0))
+        if idx % 500 == 0 or idx == len(candidate_pool):
+            print(
+                "[Refine] initialized {}/{} singleton scores".format(
+                    idx, len(candidate_pool)
+                )
             )
-            if spread > best_spread:
-                best_spread = spread
-                best_node = node
 
-        if best_node is None:
-            break
+    selected = []
+    selected_set = set()
+    current_spread = 0.0
+    start_time = time.time()
+    while len(selected) < budget and heap:
+        neg_gain, node, flag = heapq.heappop(heap)
+        if node in selected_set:
+            continue
 
-        selected.append(best_node)
-        current_spread = best_spread
+        if flag == len(selected):
+            selected.append(node)
+            selected_set.add(node)
+            current_spread = estimate(selected)
+            if len(selected) % progress_every == 0 or len(selected) == budget:
+                elapsed = time.time() - start_time
+                print(
+                    "[Refine] selected {}/{} seeds, spread={:.4f}, elapsed={:.2f}s".format(
+                        len(selected), budget, current_spread, elapsed
+                    )
+                )
+            continue
+
+        gain = estimate(selected + [node]) - current_spread
+        heapq.heappush(heap, (-gain, node, len(selected)))
 
     return selected, current_spread
 
@@ -322,8 +373,8 @@ else:
     hidden_dim = 1024
     latent_dim = 512
 
-num_epochs = 20
-inverse_steps = 10
+num_epochs = 100
+inverse_steps = 100
 learning_rate = 1e-4
 forward_hidden_dim = 64
 forward_heads = 4
@@ -531,6 +582,15 @@ for i in range(inverse_steps):
 
 candidate_scores = x_hat.squeeze(0).detach().cpu().numpy()
 refine_pool_size = min(inverse_pairs.shape[1], max(seed_num * 20, 50))
+print_config(
+    "Stage 3: Seed Refinement",
+    {
+        "target_seed_budget": seed_num,
+        "candidate_pool_size": refine_pool_size,
+        "refine_mc_runs": 50,
+        "refine_strategy": "lazy_greedy_cached",
+    },
+)
 seed, fast_spread_score = greedy_refine_seed_set(
     candidate_scores,
     graph["adj"],
@@ -550,6 +610,7 @@ with open(
 
 adj, inverse_pairs = graph["adj"], graph["inverse_pairs"]
 
+print_section("Stage 4: Final Diffusion Evaluation")
 influence = diffusion_evaluation(adj, seed, diffusion=args.diffusion_model)
 print_config(
     "Final Evaluation",
